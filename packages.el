@@ -45,8 +45,8 @@
 
 (use-package color-theme-sanityinc-tomorrow
   :ensure t)
-(use-package zenburn-theme
-  :ensure t)
+;;(use-package zenburn-theme
+;;  :ensure t)
 
 (use-package smooth-scrolling
   :ensure t)
