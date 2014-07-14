@@ -20,6 +20,8 @@
 (load (emacs-d "bdd-defuns"))
 ;;; Twitter
 (load (emacs-d "twitter") 'missing-ok)
+;;;; CEDET
+(load (emacs-d "cedet"))
 ;;; Theme
 ;;; (load-theme 'zenburn t)
 (load-theme 'sanityinc-tomorrow-eighties t)
@@ -28,6 +30,12 @@
 ;;;; Environment
 (setq shell-file-name "zsh")
 (add-to-list 'exec-path "/usr/local/bin")
+(add-to-list 'exec-path "/Users/yramin/repos/goroot/bin")
+
+(load (emacs-d "go-autocomplete"))
+(require 'go-autocomplete)
+(require 'auto-complete-config)
+
 
 ;;; Registers
 (set-register ?i
@@ -212,3 +220,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+(projectile-global-mode)

@@ -48,6 +48,18 @@
 ;;(use-package zenburn-theme
 ;;  :ensure t)
 
+(use-package xcscope
+  :ensure t)
+
+(use-package flycheck
+  :ensure t)
+
+(use-package projectile
+  :ensure t)
+
+(use-package auto-complete-clang
+  :ensure t)
+
 (use-package smooth-scrolling
   :ensure t)
 
@@ -98,6 +110,28 @@
 (use-package git-commit-mode
   :ensure t
   :defer t)
+
+(use-package grep-a-lot
+  :ensure t
+  :defer t)
+
+(use-package thrift
+  :ensure t
+  :defer t)
+
+(use-package latex-extra
+  :ensure t
+  :defer t)
+
+(use-package latex-pretty-symbols
+  :ensure t
+  :defer t)
+
+(use-package log4j-mode
+  :ensure t
+  :defer t)
+
+
 
 (use-package gitconfig-mode
   :ensure t
