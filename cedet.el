@@ -11,13 +11,3 @@
 (add-hook 'c-mode-common-hook 'my-cedet-hook)
 
 (global-ede-mode t)
-
-
-(ede-cpp-root-project "zephyr"
-                      :name "zephyr"
-                      :file "~/repos/zephyr/Makefile"
-                      :include-path '("/3rdparty/libs/include"
-                                      "/src/adminhttp"
-                                      "/src/common"
-                                      "/src/stats"))
-

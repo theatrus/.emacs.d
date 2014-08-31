@@ -204,7 +204,8 @@
 (global-set-key [s-down] 'windmove-down)
 (global-set-key [s-left] 'windmove-left)
 
-(set-face-font 'default "Source Code Pro")
+(set-face-font 'default "InputSans-13")
+(setq-default line-spacing 2)
 
 
 (defun donuts ()
