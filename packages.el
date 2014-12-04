@@ -48,9 +48,6 @@
 ;;(use-package zenburn-theme
 ;;  :ensure t)
 
-(use-package xcscope
-  :ensure t)
-
 (use-package flycheck
   :ensure t)
 
