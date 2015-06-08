@@ -111,9 +111,12 @@
 ;;;; Whitespace
 (setq-default indicate-empty-lines t) ; in the left fringe
 (setq require-final-newline t)
-(setq whitespace-style 'empty);;)'(face trailing tab-mark))
+(set-face-attribute 'whitespace-trailing nil
+                    :background "#eeee22"
+                    :weight 'bold)
+(setq whitespace-style (quote (face trailing empty)))
 (hook-into-modes 'whitespace-mode '(prog-mode-hook))
-
+(hook-into-modes 'whitespace-cleanup-mode '(prog-mode-hook))
 
 ;;;; *scratch* buffer
 (setq initial-scratch-message nil)
@@ -204,7 +207,7 @@
 (global-set-key [s-down] 'windmove-down)
 (global-set-key [s-left] 'windmove-left)
 
-(set-face-font 'default "InputSans-13")
+(set-face-font 'default "InputSans-11")
 (setq-default line-spacing 2)
 
 
@@ -214,13 +217,9 @@
 
 (put 'set-goal-column 'disabled nil)
 
-(setq ispell-program-name "/usr/local/bin/ispell")
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
+;; Org mode setup
 
-(projectile-global-mode)
+;;(setq org-log-done 'note)
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)

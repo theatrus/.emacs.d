@@ -24,6 +24,8 @@
 (require 'use-package)
 (setq use-package-minimum-reported-time 0)
 
+(use-package whitespace-cleanup-mode
+  :ensure t)
 
 (use-package ag
   :ensure t
