@@ -104,9 +104,9 @@
   :ensure t
   :bind ("C-c g p" . gist-region-or-buffer-private))
 
-(use-package git-commit-mode
-  :ensure t
-  :defer t)
+;(use-package git-commit-mode
+;  :ensure t
+;  :defer t)
 
 (use-package grep-a-lot
   :ensure t
