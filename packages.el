@@ -24,6 +24,8 @@
 (require 'use-package)
 (setq use-package-minimum-reported-time 0)
 
+(use-package whitespace-cleanup-mode
+  :ensure t)
 
 (use-package ag
   :ensure t
@@ -106,7 +108,15 @@
 
 ;(use-package git-commit-mode
 ;  :ensure t
-;  :defer t)
+                                        ;  :defer t)
+
+(use-package php-mode
+  :ensure t
+  :defer t)
+
+(use-package salt-mode
+  :ensure t
+  :defer t)
 
 (use-package grep-a-lot
   :ensure t

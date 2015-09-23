@@ -111,9 +111,12 @@
 ;;;; Whitespace
 (setq-default indicate-empty-lines t) ; in the left fringe
 (setq require-final-newline t)
-(setq whitespace-style 'empty);;)'(face trailing tab-mark))
+(set-face-attribute 'whitespace-trailing nil
+                    :background "#eeee22"
+                    :weight 'bold)
+(setq whitespace-style (quote (face trailing empty)))
 (hook-into-modes 'whitespace-mode '(prog-mode-hook))
-
+(hook-into-modes 'whitespace-cleanup-mode '(prog-mode-hook))
 
 ;;;; *scratch* buffer
 (setq initial-scratch-message nil)
@@ -188,6 +191,13 @@
           (lambda ()
             (setq indent-tabs-mode nil)
             (setq tab-width 2)
+            ))
+
+(add-hook 'sh-mode-hook
+          '(lambda ()
+            (setq indent-tabs-mode nil)
+            (setq tab-width 2)
+            (setq sh-basic-offset 2)
             ))
 
 (add-hook 'python-mode-hook
