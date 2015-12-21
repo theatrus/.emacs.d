@@ -106,7 +106,15 @@
   :ensure t
   :bind ("C-c g p" . gist-region-or-buffer-private))
 
-(use-package git-commit-mode
+;(use-package git-commit-mode
+;  :ensure t
+                                        ;  :defer t)
+
+(use-package php-mode
+  :ensure t
+  :defer t)
+
+(use-package salt-mode
   :ensure t
   :defer t)
 

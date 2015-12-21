@@ -193,11 +193,17 @@
             (setq tab-width 2)
             ))
 
+(add-hook 'sh-mode-hook
+          '(lambda ()
+            (setq indent-tabs-mode nil)
+            (setq tab-width 2)
+            (setq sh-basic-offset 2)
+            ))
+
 (add-hook 'python-mode-hook
       (lambda ()
         (setq indent-tabs-mode nil)
-        (setq tab-width 2)
-        (setq python-indent 2)))
+        ))
 
 (add-to-list 'auto-mode-alist '("BUILD\\'" . python-mode))
 
