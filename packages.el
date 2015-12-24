@@ -59,6 +59,9 @@
 (use-package auto-complete-clang
   :ensure t)
 
+(use-package dtrt-indent
+  :ensure t)
+
 (use-package smooth-scrolling
   :ensure t)
 
