@@ -271,9 +271,6 @@
   :ensure t
   :defer t)
 
-(use-package scala-mode2
-  :ensure t
-  :defer t)
 
 (use-package smex
   :ensure t
@@ -284,11 +281,20 @@
   :ensure t
   :defer t)
 
-(use-package yasnippet
-  :ensure t
-  :diminish yas-minor-mode
-  :mode ("/\\.emacs\\.d/snippets/" . snippet-mode)
-  :init
-  (progn
-    (setq yas-verbosity 3)
-    (yas-global-mode 1)))
+;(use-package yasnippet
+;  :ensure t
+;  :diminish yas-minor-mode
+;  :mode ("/\\.emacs\\.d/snippets/" . snippet-mode)
+;  :init
+;  (progn
+;    (setq yas-verbosity 3)
+;    (yas-global-mode 1)))
+
+(use-package js2-mode
+  :ensure t)
+
+(use-package json-mode
+  :ensure t)
+
+(use-package web-mode
+  :ensure t)

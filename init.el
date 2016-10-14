@@ -1,3 +1,10 @@
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (setq inhibit-default-init 1
       inhibit-startup-message 1)
 
@@ -213,7 +220,7 @@
 (global-set-key [s-down] 'windmove-down)
 (global-set-key [s-left] 'windmove-left)
 
-(set-face-font 'default "InputSans-11")
+(set-face-font 'default "Monaco-13")
 (setq-default line-spacing 2)
 
 
@@ -223,6 +230,22 @@
 
 (put 'set-goal-column 'disabled nil)
 
+(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
+
+(defadvice web-mode-highlight-part (around tweak-jsx activate)
+  (if (equal web-mode-content-type "jsx")
+    (let ((web-mode-enable-part-face nil))
+      ad-do-it)
+    ad-do-it))
+
+;; adjust indents for web-mode to 2 spaces
+(defun my-web-mode-hook ()
+  "Hooks for Web mode. Adjust indents"
+  ;;; http://web-mode.org/
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2))
+(add-hook 'web-mode-hook  'my-web-mode-hook)
 
 ;; Org mode setup
 
@@ -234,7 +257,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(dtrt-indent-mode t nil (dtrt-indent)))
+ '(dtrt-indent-mode t nil (dtrt-indent))
+ '(package-selected-packages
+   (quote
+    (yasnippet whitespace-cleanup-mode use-package thrift smooth-scrolling smex salt-mode rust-mode ruby-tools regex-tool puppet-mode protobuf-mode projectile php-mode mustache-mode multiple-cursors markdown-mode magit log4j-mode latex-pretty-symbols latex-extra ido-ubiquitous haskell-mode handlebars-mode grep-a-lot google-c-style go-mode gitignore-mode gitconfig-mode gist flycheck flx-ido fill-column-indicator expand-region edit-server dtrt-indent color-theme-sanityinc-tomorrow browse-kill-ring auto-complete-clang ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
