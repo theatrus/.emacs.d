@@ -140,7 +140,7 @@
 (fset 'yes-or-no-p 'y-or-n-p) ; brevity
 (setq ring-bell-function 'ignore) ; hush...
 ;;; Disable commonly unintended key presses.
-(global-unset-key (kbd "C-z")) ; suspend-frame
+;;; (global-unset-key (kbd "C-z")) ; suspend-frame
 (global-unset-key (kbd "s-p")) ; ns-print-buffer
 (global-unset-key (kbd "s-q")) ; save-buffers-kill-emacs
 (global-unset-key (kbd "s-t")) ; ns-popup-font-panel
@@ -167,8 +167,10 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
-(when window-system
-  (add-hook 'after-init-hook 'server-start t))
+;;;(when window-system
+(add-hook 'after-init-hook 'server-start t)
+;;;)
+
 
 
 (add-hook 'after-init-hook
