@@ -249,6 +249,9 @@
   (setq web-mode-code-indent-offset 2))
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
+;; Cursor blinks always
+(setq blink-cursor-blinks -1)
+
 ;; Org mode setup
 
 ;;(setq org-log-done 'note)

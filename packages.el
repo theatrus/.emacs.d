@@ -171,19 +171,20 @@
   :ensure t
   :defer t)
 
-(use-package ido-ubiquitous
+(use-package ido-completing-read+
   :ensure t
   :init
   ;; Fix ido-ubiquitous for newer packages
-  (defmacro ido-ubiquitous-use-new-completing-read (cmd package)
-    `(eval-after-load ,package
-       '(defadvice ,cmd (around ido-ubiquitous-new activate)
-          (let ((ido-ubiquitous-enable-compatibility nil))
-            ad-do-it))))
-  :config
-  (progn
-    (ido-ubiquitous-use-new-completing-read yas/expand 'yasnippet)
-    (ido-ubiquitous-use-new-completing-read yas/visit-snippet-file 'yasnippet)))
+;;  (defmacro ido-ubiquitous-use-new-completing-read (cmd package)
+;;    `(eval-after-load ,package
+;;       '(defadvice ,cmd (around ido-ubiquitous-new activate)
+;;          (let ((ido-ubiquitous-enable-compatibility nil))
+;;            ad-do-it))))
+;;  :config
+;;  (progn
+;;    (ido-ubiquitous-use-new-completing-read yas/expand 'yasnippet)
+  ;;    (ido-ubiquitous-use-new-completing-read yas/visit-snippet-file 'yasnippet)))
+  )
 
 (use-package magit
   :ensure t
@@ -297,4 +298,7 @@
   :ensure t)
 
 (use-package web-mode
+  :ensure t)
+
+(use-package terraform-mode
   :ensure t)
