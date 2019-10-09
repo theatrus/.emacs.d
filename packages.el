@@ -3,8 +3,7 @@
 (require 'package)
 (setq package-archives
       (append package-archives
-              '(("melpa" . "http://melpa.milkbox.net/packages/"))
-              ))
+              '(("melpa" . "http://melpa.milkbox.net/packages/"))))
 
 ;; Load the list of packages but don't initialize them.
 ;; `use-package' will arrange the necessary autoload entries.
