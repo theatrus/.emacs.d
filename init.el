@@ -252,11 +252,6 @@
 ;; Cursor blinks always
 (setq blink-cursor-blinks -1)
 
-;; Org mode setup
-
-;;(setq org-log-done 'note)
-(setq org-clock-persist 'history)
-(org-clock-persistence-insinuate)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

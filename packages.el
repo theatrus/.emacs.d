@@ -4,7 +4,7 @@
 (setq package-archives
       (append package-archives
               '(("melpa" . "http://melpa.milkbox.net/packages/"))
-              '(("org" . "http://orgmode.org/elpa/"))))
+              ))
 
 ;; Load the list of packages but don't initialize them.
 ;; `use-package' will arrange the necessary autoload entries.
@@ -240,21 +240,6 @@
   :ensure t
   :defer t)
 
-(use-package org
-  :ensure t
-  :defer t
-  :init
-  (setq org-replace-disputed-keys t)
-  :config
-  (progn
-    (org-babel-do-load-languages
-     'org-babel-load-languages
-     '((awk . t)
-       (emacs-lisp . t)
-       (java . t)
-       (python . t)
-       (ruby . t)
-       (sh . t)))))
 
 (use-package protobuf-mode
   :ensure t
