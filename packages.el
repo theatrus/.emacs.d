@@ -116,10 +116,6 @@
   :ensure t
   :defer t)
 
-(use-package salt-mode
-  :ensure t
-  :defer t)
-
 (use-package grep-a-lot
   :ensure t
   :defer t)
@@ -128,13 +124,6 @@
   :ensure t
   :defer t)
 
-(use-package latex-extra
-  :ensure t
-  :defer t)
-
-(use-package latex-pretty-symbols
-  :ensure t
-  :defer t)
 
 (use-package log4j-mode
   :ensure t

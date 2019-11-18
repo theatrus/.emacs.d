@@ -1,8 +1,3 @@
-
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
 (package-initialize)
 
 (setq inhibit-default-init 1
@@ -222,7 +217,9 @@
 (global-set-key [s-down] 'windmove-down)
 (global-set-key [s-left] 'windmove-left)
 
-(set-face-font 'default "Monaco-13")
+(add-to-list 'default-frame-alist
+             '(font . "Go Mono-12"))
+;;(set-face-font 'default "GoMono-13")
 (setq-default line-spacing 2)
 
 
@@ -260,7 +257,7 @@
  '(dtrt-indent-mode t nil (dtrt-indent))
  '(package-selected-packages
    (quote
-    (yasnippet whitespace-cleanup-mode use-package thrift smooth-scrolling smex salt-mode rust-mode ruby-tools regex-tool puppet-mode protobuf-mode projectile php-mode mustache-mode multiple-cursors markdown-mode magit log4j-mode latex-pretty-symbols latex-extra ido-ubiquitous haskell-mode handlebars-mode grep-a-lot google-c-style go-mode gitignore-mode gitconfig-mode gist flycheck flx-ido fill-column-indicator expand-region edit-server dtrt-indent color-theme-sanityinc-tomorrow browse-kill-ring auto-complete-clang ag))))
+    (yasnippet whitespace-cleanup-mode thrift smooth-scrolling smex salt-mode rust-mode ruby-tools regex-tool puppet-mode protobuf-mode projectile php-mode mustache-mode multiple-cursors markdown-mode magit log4j-mode latex-pretty-symbols latex-extra ido-ubiquitous haskell-mode handlebars-mode grep-a-lot google-c-style go-mode gitignore-mode gitconfig-mode gist flycheck flx-ido fill-column-indicator expand-region edit-server dtrt-indent color-theme-sanityinc-tomorrow browse-kill-ring auto-complete-clang ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
