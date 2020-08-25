@@ -3,12 +3,9 @@
 (require 'package)
 (setq package-archives
       (append package-archives
-              '(("melpa" . "http://melpa.milkbox.net/packages/"))
+              '(("melpa" . "http://melpa.org/packages/"))
               '(("org" . "http://orgmode.org/elpa/"))))
 
-;; Load the list of packages but don't initialize them.
-;; `use-package' will arrange the necessary autoload entries.
-(package-initialize nil)
 
 ;; If never connected to repositories before, download package descriptions so
 ;; `use-package' can trigger installation of missing packages.
