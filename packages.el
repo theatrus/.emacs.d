@@ -114,10 +114,6 @@
   :ensure t
   :defer t)
 
-(use-package salt-mode
-  :ensure t
-  :defer t)
-
 (use-package grep-a-lot
   :ensure t
   :defer t)
@@ -126,13 +122,6 @@
   :ensure t
   :defer t)
 
-(use-package latex-extra
-  :ensure t
-  :defer t)
-
-(use-package latex-pretty-symbols
-  :ensure t
-  :defer t)
 
 (use-package log4j-mode
   :ensure t
@@ -237,21 +226,6 @@
   :ensure t
   :defer t)
 
-(use-package org
-  :ensure t
-  :defer t
-  :init
-  (setq org-replace-disputed-keys t)
-  :config
-  (progn
-    (org-babel-do-load-languages
-     'org-babel-load-languages
-     '((awk . t)
-       (emacs-lisp . t)
-       (java . t)
-       (python . t)
-       (ruby . t)
-       (sh . t)))))
 
 (use-package protobuf-mode
   :ensure t
