@@ -129,14 +129,6 @@
 
 
 
-(use-package gitconfig-mode
-  :ensure t
-  :defer t)
-
-(use-package gitignore-mode
-  :ensure t
-  :defer t)
-
 (use-package go-mode
   :ensure t
   :defer t

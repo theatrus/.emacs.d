@@ -256,7 +256,8 @@
  ;; If there is more than one, they won't work right.
  '(dtrt-indent-mode t nil (dtrt-indent))
  '(package-selected-packages
-   '(yasnippet whitespace-cleanup-mode thrift smooth-scrolling smex salt-mode rust-mode ruby-tools regex-tool puppet-mode protobuf-mode projectile php-mode mustache-mode multiple-cursors markdown-mode magit log4j-mode latex-pretty-symbols latex-extra ido-ubiquitous haskell-mode handlebars-mode grep-a-lot google-c-style go-mode gitignore-mode gitconfig-mode gist flycheck flx-ido fill-column-indicator expand-region edit-server dtrt-indent color-theme-sanityinc-tomorrow browse-kill-ring auto-complete-clang ag)))
+   (quote
+    (yasnippet whitespace-cleanup-mode thrift smooth-scrolling smex salt-mode rust-mode ruby-tools regex-tool puppet-mode protobuf-mode projectile php-mode mustache-mode multiple-cursors markdown-mode magit log4j-mode latex-pretty-symbols latex-extra ido-ubiquitous haskell-mode handlebars-mode grep-a-lot google-c-style go-mode gitignore-mode gitconfig-mode gist flycheck flx-ido fill-column-indicator expand-region edit-server dtrt-indent color-theme-sanityinc-tomorrow browse-kill-ring auto-complete-clang ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
